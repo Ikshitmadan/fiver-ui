@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Gig.scss';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
-import { newRequest } from '../../../Utils/newRequestt';
+import { newRequest } from '../../../Utils/newRequest';
 import { fetchUser } from '../GigCards/GigCard';
 import { Reviews } from '../Reviews/Reviews';
 import { Link } from 'react-router-dom';
