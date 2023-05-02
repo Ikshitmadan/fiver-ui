@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Gigcard.scss';
+import './GigCard.scss';
 import { Link, useParams } from 'react-router-dom';
 import { newRequest } from '../../../Utils/newRequest';
 import { useEffect } from 'react';
