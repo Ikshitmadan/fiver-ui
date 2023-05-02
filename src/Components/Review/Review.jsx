@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Review.scss';
-import { newRequest } from '../../../../fiverbackend/Utils/newRequest';
+import { newRequest } from '../../../Utils/newRequest';
 import { fetchUser } from '../GigCards/GigCard';
 export const Review = ({review}) => {
   

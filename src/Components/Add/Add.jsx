@@ -2,9 +2,9 @@ import React from 'react'
 import './Add.scss'
 import { gigReducer,INITIAL_STATE } from '../../Reducer/GigReducer'
 import { useReducer,useState } from 'react'
-import { newRequest } from '../../../../fiverbackend/Utils/newRequest';
+import { newRequest } from '../../../Utils/newRequest';
 import { useNavigate } from 'react-router-dom'
-import { upload } from '../../../../fiverbackend/Utils/upload'
+import { upload } from '../../../Utils/Upload'
 export const Add = () => {
 
   const [singleFile, setSingleFile] = useState(undefined);

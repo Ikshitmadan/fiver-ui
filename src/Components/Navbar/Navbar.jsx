@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import './Navbar.scss'
 import { useState ,useEffect} from 'react'
-import { newRequest } from '../../../../fiverbackend/Utils/newRequest';
+import { newRequest } from '../../../Utils/newRequest';
 export const Navbar = () => {
     const [active,setActive]=useState(true);
     const [selected,setselected]=useState(false);

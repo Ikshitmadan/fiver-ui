@@ -2,7 +2,7 @@ import React from 'react'
 import './Reviews.scss'
 import { Review } from '../Review/Review'
 import { useState,useEffect } from 'react'
-import { newRequest } from '../../../../fiverbackend/Utils/newRequest';
+import { newRequest } from '../../../Utils/newRequest';
 import { useParams } from 'react-router-dom'
 export const Reviews = (props) => {
   console.log("key is",props.parent);

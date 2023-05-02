@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Gigs.scss'
 import { gigs } from '../../data';
 import { GigCard } from '../GigCards/GigCard';
-import { newRequest } from '../../../../fiverbackend/Utils/newRequest';
+import { newRequest } from '../../../Utils/newRequest';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useRef } from 'react';
 export const Gigs = () => {

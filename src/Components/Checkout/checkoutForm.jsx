@@ -7,7 +7,7 @@ import {
     useElements
   } from "@stripe/react-stripe-js";
   import { useState,useEffect } from 'react';
-  import { newRequest } from '../../../../fiverbackend/Utils/newRequest';
+  import { newRequest } from '../../../Utils/newRequest';
 
 export const CheckoutForm = () => {
 

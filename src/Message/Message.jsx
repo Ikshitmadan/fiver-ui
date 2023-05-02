@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import './Message.scss'
 import moment from 'moment';
-import { newRequest } from '../../../fiverbackend/Utils/newRequest';
+import { newRequest } from '../../../Utils/newRequest';
 export const Message = () => {
 
   const {id}=useParams();

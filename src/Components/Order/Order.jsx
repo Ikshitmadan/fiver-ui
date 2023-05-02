@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Order.scss';
 import { Link, useNavigate } from 'react-router-dom';
-import { newRequest } from '../../../../fiverbackend/Utils/newRequest';
+import { newRequest } from '../../../Utils/newRequest';
 
 export const Order = () => {
   const [data,setdata]=useState(null);

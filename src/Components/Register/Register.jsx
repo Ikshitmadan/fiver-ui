@@ -4,8 +4,8 @@ import React from 'react'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
   import './Register.scss'
-import { upload } from '../../../../fiverbackend/Utils/upload';
- import { newRequest } from '../../../../fiverbackend/Utils/newRequest';
+import { upload } from '../../../Utils/Upload';
+ import { newRequest } from '../../../Utils/newRequest';
 function Register() {
     const [file, setFile] = useState(null);
     const [user, setUser] = useState({

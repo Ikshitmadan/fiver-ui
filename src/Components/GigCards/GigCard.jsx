@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Gigcard.scss';
 import { Link, useParams } from 'react-router-dom';
-import { newRequest } from '../../../../fiverbackend/Utils/newRequest';
+import { newRequest } from '../../../Utils/newRequest';
 import { useEffect } from 'react';
 
 export const fetchUser=async (userId)=>{

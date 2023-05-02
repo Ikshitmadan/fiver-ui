@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Login.scss";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios'
-import { newRequest } from "../../../../fiverbackend/Utils/newRequest";
+import { newRequest } from "../../../Utils/newRequest";
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");

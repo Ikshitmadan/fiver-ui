@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
-import { newRequest } from '../../../../fiverbackend/Utils/newRequest';
+import { newRequest } from '../../../Utils/newRequest';
 import { useParams } from 'react-router-dom';
 import { CheckoutForm } from "../Checkout/checkoutForm";
 const stripePromise = loadStripe("pk_test_51MoMDSSIl4VwGEZmQ8HFgO0WHe0hYZBpgAjV42vGUVUvaimtpaEmsZWbaYiVHYHtMH66mjugmOewc8rbcdT1aFrv00oBqTaNWx");
