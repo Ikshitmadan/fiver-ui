@@ -25,7 +25,7 @@ import { Add } from "./Components/Add/Add";
 import Login from "./Components/Login/login";
 import Register from "./Components/Register/Register";
 import { CheckoutForm } from "./Components/Checkout/checkoutForm";
-import { Success } from "./Components/Pay/success";
+import { Success } from "./Components/Pay/Success";
 import { Pay } from "./Components/Pay/Pay";
 function App() {
 
