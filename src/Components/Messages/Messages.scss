@@ -1,0 +1,78 @@
+.messages {
+    display: flex;
+    justify-content: center;
+    padding: 10px 16px;
+  
+    .container {
+      padding: 50px 0px;
+  
+      .title {
+        display: flex;
+        justify-content: space-between;
+  
+        button {
+          background-color: #1dbf73;
+          color: white;
+          font-weight: 500;
+          border: none;
+          padding: 10px;
+          cursor: pointer;
+        }
+      }
+  
+      table {
+        width: 100%;
+  
+        tr {
+          height: 100px;
+          th {
+            text-align: left;
+          }
+          td {
+            padding: 10px;
+  
+            &:first-child {
+              font-weight: 500;
+            }
+            
+            &:nth-child(2),
+            &:nth-child(3) {
+              color: gray;
+            }
+          }
+  
+          button {
+            background-color: #1dbf73;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+          }
+  
+          &.active {
+            background-color: #1dbf730f;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width:500px) {
+    table{
+      padding: 5px;
+    }
+    .messages .container table  td {
+      width: max-content;
+      padding: 2px;
+      text-align: center;
+    }
+    .messages .container th{
+     padding: 2px;
+     text-align: center;
+    }
+    th,td{
+      text-align: center;
+    }
+   
+  }
+  

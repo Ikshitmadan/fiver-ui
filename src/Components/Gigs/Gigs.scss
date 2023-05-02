@@ -1,0 +1,118 @@
+.gigs{
+    padding: 30px;
+
+    .containe{
+        // background-color: yellow;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        // align-items: center;
+
+        .cards{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            // background-color: yellow;
+        }
+
+        .breadcrumps{
+            font-weight: 300;
+            font-size: 33px;
+        }
+p{
+    font-weight: 300;
+    color: gray;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+   
+    gap: 10px;
+
+
+    .left{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        input{
+            width: 80px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            outline: none;
+            
+
+        }
+        button{
+            color: white;
+            background-color: green;
+            border-radius: 5px;
+            width: 40px;
+         cursor: pointer;
+         &:hover{
+         }
+
+        }
+    }
+
+    .right{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        
+        img{
+            cursor: pointer;
+            height: 14px;
+            width: 14px;
+            object-fit: cover;
+        }
+
+        span{
+            cursor: pointer;
+            margin-right: 4px;
+        }
+
+        .rightmenu{
+            padding: 20px;
+            background-color: white;
+            border: 0.5px solid lightgrey;
+            border-radius: 5px;
+            position: absolute;
+            top: 20px;
+            right: 0;
+            z-index: 9;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            color: #555;
+        }
+    }
+}
+
+    }
+}
+
+/* Image styles for screens up to 480px wide */
+@media (max-width: 480px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+     
+    }
+
+    .gigs .containe .menu .right .rightmenu{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        height: 35px;
+        padding: 5px;
+    }
+  }
+  
+ 
+  
+

@@ -1,0 +1,53 @@
+.items{
+    // background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0px;
+
+    p{
+        max-width: 100%;
+    }
+
+
+ 
+    .user{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      
+      
+        img{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+
+        }
+
+    }
+    .stars{
+        img{
+            height: 14px;
+            width: 14px;
+            object-fit: contain;
+
+        }
+       
+    }
+
+    .helpful{
+        color: gray;
+        font-weight: bold;
+        display:flex;
+        align-items: center;
+        gap:10px;
+        img{
+            cursor: pointer;
+            height: 20px;
+            width: 20px;
+        }
+    }
+
+
+
+}

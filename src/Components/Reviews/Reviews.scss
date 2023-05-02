@@ -1,0 +1,42 @@
+.Reviewz{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+
+.add {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .addForm {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      textarea {
+        border-radius: 10px;
+outline: none;
+border: 1px solid lightgray;
+        padding: 10px;
+        height: max-content;
+      }
+
+      select {
+        width: 200px;
+        padding: 20px;
+        align-self: flex-end;
+      }
+      button {
+        align-self: flex-end;
+        width: 100px;
+        border: none;
+        padding: 10px;
+        color: white;
+        background-color: #1dbf73;
+        cursor: pointer;
+      }
+    }
+}
+}

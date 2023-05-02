@@ -1,0 +1,27 @@
+.footer{
+
+    height: 150px;
+    width: 100%;
+  padding: 60px;
+  
+    background-color:rgba(211, 211, 211, 0.002);
+
+    .container{
+        display: flex;
+        align-items: center;
+        .category{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 33%;
+            h1{
+                color: #404145;
+            }
+            div{
+                color: gray;
+            }
+        }
+
+    }
+
+}
