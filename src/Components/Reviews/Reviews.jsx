@@ -12,7 +12,14 @@ export const Reviews = (props) => {
   const fetchData=async()=>{
     try{
 console.log(id);
-      const res =await  newRequest.get(`/reviews/${id}`);
+      const res =await  newRequest.get(`/reviews/${id}`,{
+        headers: {
+          token:
+            "Bearer "+JSON.parse(localStorage.getItem('currentuser')).token,
+        }
+      }
+        
+      );
       if(res){
         console.log(res.data);
         return res.data;

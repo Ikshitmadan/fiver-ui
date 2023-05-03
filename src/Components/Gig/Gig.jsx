@@ -128,7 +128,7 @@ fetchData().then(data=>{
         
             
                 
-                    <Reviews parent={true}/>
+                    <Reviews parent={data.userId===user._id}/>
 
                   
             
