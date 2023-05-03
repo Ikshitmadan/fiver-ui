@@ -6,7 +6,8 @@ import { newRequest } from '../../../Utils/newRequest';
 export const Order = () => {
   const [data,setdata]=useState(null);
   const navigate=useNavigate();
-
+const token=JSON.parse(localStorage.getItem('currentuser')).token
+console.log(token,"inside order.jsx");
   const fetchOrders=async()=>{
     try{
       const res= await newRequest.get('/orders',{

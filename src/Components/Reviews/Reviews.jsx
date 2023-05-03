@@ -39,7 +39,12 @@ setdata(data);
       e.preventDefault();
       const desc = e.target[0].value;
       const star = e.target[1].value;
-    const data=  await newRequest.post(`/reviews/${id}`,{star:star,desc:desc});
+    const data=  await newRequest.post(`/reviews/${id}`,{star:star,desc:desc},{
+      headers: {
+        token:
+          "Bearer "+JSON.parse(localStorage.getItem('currentuser')).token,
+      },
+    });
   console.log(data,"handle submit");
   const res=await fetchData()
   setdata(res);

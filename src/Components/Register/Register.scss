@@ -4,7 +4,6 @@
     justify-content: center;
   
     form {
-      width: 860px;
       padding: 30px 0px;
       display: flex;
       gap: 120px;
@@ -104,4 +103,19 @@
         }
       }
     }
+  }
+
+  @media(max-width: 1000px) {
+    .register{
+      display: block;
+    
+      padding: 20px;
+      form{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+    
+    
   }

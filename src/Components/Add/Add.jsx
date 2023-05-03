@@ -54,7 +54,12 @@ export const Add = () => {
 
   const handleSubmit=async()=>{
     try{
-    const res=  await newRequest.post('/gigs',state);
+    const res=  await newRequest.post('/gigs',state,{
+      headers: {
+        token:
+          "Bearer "+JSON.parse(localStorage.getItem('currentuser')).token,
+      },
+    });
     console.log(res);
 
     }

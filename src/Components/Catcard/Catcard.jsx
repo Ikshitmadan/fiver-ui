@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Catcard.scss'
 export const Catcard = ({item}) => {
-  console.log(item,"item");
   const url=`/gigs?cat=${item.title}`
   return (
     <Link to={url}>

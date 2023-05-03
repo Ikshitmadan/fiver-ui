@@ -5,16 +5,16 @@ import { newRequest } from '../../../Utils/newRequest';
 import moment from "moment";
 
 const Messages = () => {
-  const currentUser= JSON.parse(localStorage.getItem("currentuser"),{
-    headers: {
-      token:
-        "Bearer "+JSON.parse(localStorage.getItem('currentuser')).token,
-    }
-  });
+  const currentUser= JSON.parse(localStorage.getItem("currentuser"));
 console.log(currentUser);
   const fetch=async()=>{
     try{
-      const res=await newRequest.get('/conversations')
+      const res=await newRequest.get('/conversations',{
+        headers: {
+          token:
+            "Bearer "+JSON.parse(localStorage.getItem('currentuser')).token,
+        }
+      })
       if(res){
         return res.data;
       }
@@ -40,7 +40,12 @@ console.log(currentUser);
   const handleRead=async(id,e)=>{
     try{
       console.log(`id inside handle Read`);
-      const {data}=await newRequest.put(`/conversations/${id}`);
+      const {data}=await newRequest.put(`/conversations/${id}`,{
+        headers: {
+          token:
+            "Bearer "+JSON.parse(localStorage.getItem('currentuser')).token,
+        }
+      });
       console.log(data);
       console.log(e.target.style);
       e.target.style.display=`none`;
