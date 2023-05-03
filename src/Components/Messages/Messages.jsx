@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Messages.scss";
 import { newRequest } from '../../../Utils/newRequest';
 import moment from "moment";
 
 const Messages = () => {
+  const navigate=useNavigate();
   const currentUser= JSON.parse(localStorage.getItem("currentuser"));
 console.log(currentUser);
   const fetch=async()=>{
     try{
       const res=await newRequest.get('/conversations',{
         headers: {
-          token:
-            "Bearer "+JSON.parse(localStorage.getItem('currentuser')).token,
+          token:localStorage.getItem('currentuser')?
+            "Bearer "+JSON.parse(localStorage.getItem('currentuser')).token:"",
         }
       })
       if(res){
@@ -21,7 +22,10 @@ console.log(currentUser);
       return [];
     }
     catch(err){
-      console.log(err);
+      if(err.response.data==="not authenticated"){
+        navigate("/login");
+
+    }
     }
     
   }
@@ -42,8 +46,8 @@ console.log(currentUser);
       console.log(`id inside handle Read`);
       const {data}=await newRequest.put(`/conversations/${id}`,{
         headers: {
-          token:
-            "Bearer "+JSON.parse(localStorage.getItem('currentuser')).token,
+          token:JSON.parse(localStorage.getItem('currentuser'))?
+            "Bearer "+JSON.parse(localStorage.getItem('currentuser')).token:"",
         }
       });
       console.log(data);
@@ -52,7 +56,9 @@ console.log(currentUser);
      
     }
     catch(err){
-      console.log(err);
+     if(err.response.message=="not authenticated"){
+
+     }
     }
    
   }
