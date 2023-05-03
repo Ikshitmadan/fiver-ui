@@ -18,7 +18,12 @@ const[err,Seterr]=useState("");
   console.log(user._id);
   const fetchData=async ()=>{
     try{
-      const res=await  newRequest.get(`gigs/single/${id}`);
+      const res=await  newRequest.get(`gigs/single/${id}`,{
+        headers: {
+          token:
+            "Bearer "+JSON.parse(localStorage.getItem('currentuser')).token,
+        },
+      });
       console.log(res,"res");
       if(res){
         const user=await fetchUser(res.data.userId);

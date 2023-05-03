@@ -16,7 +16,12 @@ const [clientSecret, setClientSecret] = useState("");
 
 
 useEffect(() => {
-   newRequest.post(`/orders/${id}`).then((res) => setClientSecret(res.data.clientSecret));
+   newRequest.post(`/orders/${id}`,{
+    headers: {
+      token:
+        "Bearer "+JSON.parse(localStorage.getItem('currentuser')).token,
+    }
+   }).then((res) => setClientSecret(res.data.clientSecret));
   }, []);
 
 

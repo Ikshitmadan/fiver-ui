@@ -9,7 +9,12 @@ export const Order = () => {
 
   const fetchOrders=async()=>{
     try{
-      const res= await newRequest.get('/orders');
+      const res= await newRequest.get('/orders',{
+        headers: {
+          token:
+            "Bearer "+JSON.parse(localStorage.getItem('currentuser')).token,
+        }
+      });
       
       console.log(res.data);
 return res.data;

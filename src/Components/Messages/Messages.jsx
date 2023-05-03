@@ -5,7 +5,12 @@ import { newRequest } from '../../../Utils/newRequest';
 import moment from "moment";
 
 const Messages = () => {
-  const currentUser= JSON.parse(localStorage.getItem("currentuser"));
+  const currentUser= JSON.parse(localStorage.getItem("currentuser"),{
+    headers: {
+      token:
+        "Bearer "+JSON.parse(localStorage.getItem('currentuser')).token,
+    }
+  });
 console.log(currentUser);
   const fetch=async()=>{
     try{

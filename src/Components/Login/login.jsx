@@ -17,7 +17,7 @@ console.log(username);
 console.log(password);
     try{
         const res= await newRequest.post("auth/login",{username,password});
-        localStorage.setItem("currentuser",JSON.stringify((await res).data));
+        localStorage.setItem("currentuser",JSON.stringify( res.data));
 
         console.log("data",res);
         navigate('/');

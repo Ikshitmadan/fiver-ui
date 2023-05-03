@@ -27,7 +27,12 @@ export const Gigs = () => {
                 search="?";
             }
             const res=await newRequest.get(`/gigs${search}&min=${minRef.current.value}&max=${maxRef.current.value}&sort=${sort}`
-            );
+            ,{
+                headers: {
+                    token:
+                      "Bearer "+JSON.parse(localStorage.getItem('currentuser')).token,
+                  }
+            });
 
             return res;
         }

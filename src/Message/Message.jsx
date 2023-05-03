@@ -13,7 +13,12 @@ export const Message = () => {
 const[text,settext]=useState("");
   const fetch=async()=>{
     try{
-      const {data} =await  newRequest.get(`/messages/${id}`);
+      const {data} =await  newRequest.get(`/messages/${id}`,{
+        headers: {
+          token:
+            "Bearer "+JSON.parse(localStorage.getItem('currentuser')).token,
+        }
+      });
       setmessage(data);
       
     }
@@ -30,6 +35,11 @@ const[text,settext]=useState("");
         desc:text,
         conversationId:id
    
+    },{
+      headers: {
+        token:
+          "Bearer "+JSON.parse(localStorage.getItem('currentuser')).token,
+      }
     })
     fetch()
     settext("");

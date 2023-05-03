@@ -14,6 +14,11 @@ const confirm=async()=>{
     try{
         await newRequest.put(`/orders/`,{
             payment_intent:payment_intent  
+        },{
+            headers: {
+                token:
+                  "Bearer "+JSON.parse(localStorage.getItem('currentuser')).token,
+              }
         })
         navigate('/orders');
     }

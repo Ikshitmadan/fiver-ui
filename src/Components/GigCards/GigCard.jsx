@@ -6,7 +6,12 @@ import { useEffect } from 'react';
 
 export const fetchUser=async (userId)=>{
     try{
-        const res= await    newRequest.get(`user/${userId}`)
+        const res= await    newRequest.get(`user/${userId}`,{
+            headers: {
+                token:
+                  "Bearer "+JSON.parse(localStorage.getItem('currentuser')).token,
+              }
+        })
         console.log(res.data);
         return res;
     }
